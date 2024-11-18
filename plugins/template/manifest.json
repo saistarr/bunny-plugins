@@ -1,5 +1,5 @@
 {
-  "name": "test plugi2n",
+  "name": "test plugi2n Woah.",
   "description": "hi",
   "authors": [
     {
@@ -9,6 +9,6 @@
   ],
   "main": "src/index.js",
   "vendetta": {
-    "icon": "ic_link"
+    "icon": "src/template/srcimg.jpg"
   }
 }
