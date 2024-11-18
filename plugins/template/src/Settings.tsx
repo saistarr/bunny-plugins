@@ -1,8 +1,32 @@
+import { React, ReactNative as RN } from "@vendetta/metro/common";
+import { useProxy } from "@vendetta/storage";
+import { storage } from "@vendetta/plugin";
 import { Forms } from "@vendetta/ui/components";
-const { FormText } = Forms;
 
-export default () => (
-    <FormText>
-        Hello, world!
-    </FormText>
-)
+const { FormRow, FormSection, FormSwitch } = Forms;
+
+const categories = [
+  "uhh epic setting",
+];
+for (const cat of categories) storage[cat] ??= true;
+
+export default () => {
+  useProxy(storage);
+  return (
+    <RN.ScrollView style={{ flex: 1 }}>
+      <FormSection title="Options" titleStyleType="no_border">
+        {categories.map((category) => (
+          <FormRow
+            label={category}
+            trailing={
+              <FormSwitch
+                value={storage[category]}
+                onValueChange={(v) => (storage[category] = v)}
+              />
+            }
+          />
+        ))}
+      </FormSection>
+    </RN.ScrollView>
+  );
+};
