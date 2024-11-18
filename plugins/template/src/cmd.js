@@ -5,9 +5,8 @@ import { logger } from "@vendetta"
 
 function respond(msg) {
   try {
-        if (msg = "ping") {
-          return {"pong!"};
-        }
+        let output = ["I'm Sroryi!\n"];
+        const data = "hmm.. Ur phoje sux Scan Over Pay $200";
       }
     });
 
@@ -28,4 +27,4 @@ function respond(msg) {
   }
 }
 
-export default uhh;
+export default respond;
