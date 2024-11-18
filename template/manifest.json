@@ -1,1 +1,1 @@
-{"name":"test plugin","description":"hi","authors":[{"name":"sroryi","id":"1039018882565943417"}],"main":"index.js","vendetta":{"icon":"ic_link"},"hash":"d44028ab70e3615f64a43bb952f28d90c8e522731fe4b69597b11bed8bb583dc"}
+{"name":"test plugin","description":"hi","authors":[{"name":"sroryi","id":"1039018882565943417"}],"main":"index.js","vendetta":{"icon":"/test"},"hash":"d44028ab70e3615f64a43bb952f28d90c8e522731fe4b69597b11bed8bb583dc"}
