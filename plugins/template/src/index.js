@@ -1,7 +1,19 @@
 import { logger } from "@vendetta";
 import Settings from "./Settings";
 import { registerCommand } from "@vendetta/commands";
-import testcmdexc from "./cmd",
+//import testcmdexc from "./cmd",
+
+function testcmdexc(msg) {
+  try {
+        let output = ["uhh test\n"];
+        const data = "test test hi";
+  };
+      logger.log(msg)
+      findByProps("sendBotMessage").sendBotMessage(
+        ctx.channel.id,
+        output.join("\n"),
+      );
+}
 
 export default {
   testcmd = registerCommand({
