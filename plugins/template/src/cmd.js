@@ -6,25 +6,13 @@ import { logger } from "@vendetta"
 function respond(msg) {
   try {
         let output = ["I'm Sroryi!\n"];
-        const data = "hmm.. Ur phoje sux Scan Over Pay $200";
-      }
-    });
+        const data = "test test hi";
+  };
 
-    const epermit = storage["ephemeral"];
-    const ephemeral = args.find((i) => i.name == "ephemeral")?.value ?? epermit;
-    if ((ephemeral || epermit) && !(epermit && !ephemeral)) {
       findByProps("sendBotMessage").sendBotMessage(
         ctx.channel.id,
         output.join("\n"),
       );
-    } else {
-      return { content: output.join("\n") };
-    }
-  } catch (e) {
-    alert(e);
-    console.error(e);
-    throw e;
-  }
 }
 
 export default respond;
