@@ -1,7 +1,6 @@
 import { storage } from "@vendetta/plugin"
 import { useProxy } from "@vendetta/storage"
 import { findByName } from "@vendetta/metro";
-import VersionChange from "../../lib/components/versionChange";
 import updates from "./update";
 
 import { Forms, General } from "@vendetta/ui/components";
@@ -99,7 +98,7 @@ export default () => {
 							}}>
 								{
 									updates.map((data, index) => {
-										return <VersionChange change={data} index={index} totalIndex={updates.length}/>
+										
 									})
 								}
 							</View>
