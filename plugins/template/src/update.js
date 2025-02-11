@@ -37,7 +37,7 @@ const update = [
 		ma(
 			"[1.1.0] hmm1",
 		)
-	),
+	],
 	[
 		"1.2",
 		null,
