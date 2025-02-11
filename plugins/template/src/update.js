@@ -1,8 +1,4 @@
-try {
-    import { createList } from "../../lib/utility";
-} catch (ignore) {
-    
-}
+import { createList } from "../../lib/utility";
 
 function ma(...a) { return [...a] }
 
