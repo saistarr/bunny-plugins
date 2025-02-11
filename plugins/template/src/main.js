@@ -1,21 +1,22 @@
 import { registerCommand } from "@vendetta/commands"
-import { findByProps } from "@vendetta/metro"
 
-const MessageActions = findByProps("sendMessage", "receiveMessage")
-
-let commands = [
+let testCommand = [
 ]
 
-commands.push(registerCommand({
-    name: "test !!",
-    displayName: "test yeah",
-    description: "it is a test or something",
-    displayDescription: "description or something i think",
-    applicationId: -1,
-    inputType: 1,
-    type: 1,
+export const onLoad = () => {
+    testCommand = registerCommand({
+        name: "test !!",
+        displayName: "test 2 !!",
+        description: "hi !!",
+        displayDescription: "hello !!",
+        applicationId: '-1',
+        inputType: 1,
+        type: 1,
 
-    execute: (ctx) => MessageActions.sendMessage(ctx.channel.id, {
-        content: ["This is a message with components"],
-    })
-}))
+        execute: async () => { return { content: {"id":"e17dbc8227aeef69e0144649714738ea","text":"hmmmmm... hai!!! ^w^","language":"en"} }}
+    });
+}
+
+export const onUnload = () => {
+    testCommand();
+}
