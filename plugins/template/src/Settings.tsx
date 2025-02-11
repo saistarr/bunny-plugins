@@ -1,12 +1,8 @@
 import { storage } from "@vendetta/plugin"
 import { useProxy } from "@vendetta/storage"
 import { findByName } from "@vendetta/metro";
-try {
-    import VersionChange from "../../lib/components/versionChange";
-	import updates from "./update";
-} catch (ignore) {
-    
-}
+import VersionChange from "../../lib/components/versionChange";
+import updates from "./update";
 
 import { Forms, General } from "@vendetta/ui/components";
 
