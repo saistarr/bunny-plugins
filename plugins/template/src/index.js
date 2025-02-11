@@ -1,7 +1,6 @@
 import { logger } from "@vendetta";
 import Settings from "./Settings";
 import { registerCommand } from "@vendetta/commands";
-//import testcmdexc from "./cmd",
 
 function testcmdexc(msg) {
   try {
