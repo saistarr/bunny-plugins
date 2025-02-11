@@ -12,7 +12,7 @@ function testcmdexc(msg) {
         ctx.channel.id,
         output.join("\n"),
       );
-}
+};
 
 export default {
   testcmd = registerCommand({
@@ -36,4 +36,4 @@ export default {
         logger.log("Goodbye, world.");
     },
     settings: Settings,
-}
+};
