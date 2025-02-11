@@ -1,7 +1,7 @@
 import { useProxy } from "@vendetta/storage";
 import { storage } from "@vendetta/plugin";
 import { findByProps } from "@vendetta/metro";
-import { logger } from "@vendetta"
+import { logger } from "@vendetta";
 
 function respond(msg) {
   try {
