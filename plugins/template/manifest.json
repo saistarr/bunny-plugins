@@ -1,0 +1,14 @@
+{
+    "name": "template test!",
+    "description": "yea",
+    "authors": [
+        {
+            "name": "me yeah",
+            "id": "my id here woah"
+        }
+    ],
+    "main": "src/index.ts",
+    "vendetta": {
+        "icon": "ic_badge_staff"
+    }
+}
