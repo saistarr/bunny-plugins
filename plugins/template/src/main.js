@@ -13,7 +13,7 @@ export const onLoad = () => {
         inputType: 1,
         type: 1,
 
-        execute: async () => { return { content: {"id":"e17dbc8227aeef69e0144649714738ea","text":"hmmmmm... hai!!! ^w^","language":"en"} }}
+        execute: async () => { return {content:"e17dbc8227aeef69e0144649714738ea","text":"hmmmmm... hai!!! ^w^"}}
     });
 }
 
