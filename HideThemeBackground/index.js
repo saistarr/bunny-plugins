@@ -1,1 +1,1 @@
-(function(n){"use strict";const e=n.storage.BunnyColorPreferencesStorage;e.customBackground="shown"})(vendetta.plugin);
+(function(o){"use strict";o.colorsPref.customBackground="shown"})(colors);
