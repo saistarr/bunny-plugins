@@ -1,1 +1,1 @@
-(function(o){"use strict";o.colorsPref.customBackground="shown"})(_themes);
+(function(t){"use strict";t.colorsPref.customBackground="shown"})(vendetta.themes);
