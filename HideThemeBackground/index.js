@@ -1,1 +1,1 @@
-(function(o){"use strict";o.BunnyColorPreferencesStorage.customBackground="shown"})(colors);
+(function(c){"use strict";c.colorsPref.customBackground="shown"})(preferences);
