@@ -1,0 +1,14 @@
+{
+    "name": "HideThemeBackground",
+    "description": "Hides your theme's background.",
+    "authors": [
+        {
+            "name": "Sai",
+            "id": "1334130528038948932"
+        }
+    ],
+    "main": "src/main.js",
+    "vendetta": {
+        "icon": "ic_image"
+    }
+}
