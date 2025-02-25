@@ -1,3 +1,3 @@
-import { BunnyColorPreferencesStorage } from "@themes/colors/preferences"
-BunnyColorPreferencesStorage.customBackground = "shown"
+import { colorsPref } from "@colors/preferences"
+colorsPref.customBackground = "shown"
 // sorry, i'm just learning and i've never used javascript before lol
