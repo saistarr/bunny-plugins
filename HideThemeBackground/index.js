@@ -1,1 +1,1 @@
-(function(c){"use strict";c.colorsPref.customBackground="shown"})(preferences);
+(function(o){"use strict";o.colorsPref.customBackground="shown"})(_themes);
