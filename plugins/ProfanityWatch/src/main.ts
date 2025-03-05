@@ -29,7 +29,7 @@ export default function patchSendMessage() {
 			if ((content.toLowerCase()).includes(bad)) {
 			content = Array.from(content)[0];
 				for (let i = 0; i < content.length -1; i++) {
-				   content = content + "*";
+				   content = "*";
 				};
 			};
 		};
