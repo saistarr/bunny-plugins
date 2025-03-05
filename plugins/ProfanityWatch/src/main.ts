@@ -24,7 +24,8 @@ export default function patchSendMessage() {
 		// Go through each rule and run the message through it
 		for (const bad of profanity) {
 			if ((content.toLowerCase()).includes(bad)) {
-				for (let i = 0; i < content.length -1; i++) {
+				content = Array.from(content)[0]
+				for (let i = 0; i < args[1].content.length -1; i++) {
 				   content = content + "*";
 				};
 			};
