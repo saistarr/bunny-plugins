@@ -29,10 +29,10 @@ export default function patchSendMessage() {
 				   asterisks = asterisks + "*";
 				};
 				
-				var indexstart = (content.toLowerCase()).indexOf(bad - (bad.length +1))
-				logger.log(indexstart)
-				logger.log(content)
-				content = args[1].content.substring(0, indexstart) + args[1].content.substring(args[1].content.length);
+				var indexstart = (content.toLowerCase()).indexOf(bad - (bad.length +1));
+				logger.log(indexstart);
+				logger.log(content);
+				content = (content.toLowerCase()).indexOf(bad) // args[1].content.substring(0, indexstart) + args[1].content.substring(args[1].content.length);
 			};
 		};
 		
