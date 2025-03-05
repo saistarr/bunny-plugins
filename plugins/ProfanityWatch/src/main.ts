@@ -31,8 +31,9 @@ export default function patchSendMessage() {
 				
 				var messagelower = content.toLowerCase();
 				var indexstart = messagelower.indexOf(bad); //- bad.length;
-				var newcontent = args[1].content.substring(0, indexstart) + content.substring(indexstart, content.length);
-				showToast(`${content} ${bad} ${indexstart}`, getAssetIDByName("ic_warning_24px"));
+				var newcontent = content.substring(0, indexstart) + content.substring(indexstart, content.length);
+				var newcontent2 = content.substring(newindex, content.length)
+				showToast(`${newcontent} | ${bad} | ${indexstart}`, getAssetIDByName("ic_warning_24px"));
 			};
 		};
 		
