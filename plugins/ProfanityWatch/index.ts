@@ -1,4 +1,4 @@
-import patchSendMessage from "./src/sendMessage";
+import patchSendMessage from "./src/main";
 let patches;
 
 export default {
