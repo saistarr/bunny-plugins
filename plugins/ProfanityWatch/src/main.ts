@@ -4,6 +4,7 @@ import { findByProps } from "@vendetta/metro";
 import { before } from "@vendetta/patcher";
 import { getAssetIDByName } from "@vendetta/ui/assets";
 import { showToast } from "@vendetta/ui/toasts";
+import { logger } from "@vendetta";
 var profanity = [
 	"fuck",
 	"bitch",
@@ -29,7 +30,9 @@ export default function patchSendMessage() {
 				};
 				
 				var indexstart = (content.toLowerCase()).indexOf(bad - (bad.length +1))
-				content = indexstart as string//content.substring(0, indexstart)// + content.substring(indexstart);
+				logger.log(indexstart)
+				logger.log(content)
+				content = args[1].content.substring(0, indexstart) + args[1].content.substring(args[1].content.length);
 			};
 		};
 		
