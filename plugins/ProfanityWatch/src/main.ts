@@ -25,7 +25,7 @@ export default function patchSendMessage() {
 		for (const bad of profanity) {
 			var asterisks = ""
 			for (let i = 0; i < bad.length -1; i++) {
-			   asterisks = asterisks + "*";
+			   asterisks = asterisks + "\*";
 		    };
 		    
 		    content = content.replaceAll(bad, Array.from(bad)[0] + asterisks)
