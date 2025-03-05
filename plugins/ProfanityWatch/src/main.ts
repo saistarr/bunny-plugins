@@ -1,4 +1,4 @@
---// using fierdetta's Text Replacement plugin as a reference (not sure where to get the @vendetta locations, so its hard to make stuff on my own, if you happen to know id love to know!)
+// using fierdetta's Text Replacement plugin as a reference (not sure where to get the @vendetta locations, so its hard to make stuff on my own, if you happen to know id love to know!)
 import { findByProps } from "@vendetta/metro";
 import { before } from "@vendetta/patcher";
 import { getAssetIDByName } from "@vendetta/ui/assets";
