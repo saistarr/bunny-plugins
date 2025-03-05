@@ -34,7 +34,7 @@ export default function patchSendMessage() {
 				logger.log(content);
 				logger.log(bad);
 				logger.log(indexstart);
-				content = args[1].content.substring(0, indexstart) + args[1].content.substring(args[1].content.length)
+				content = args[1].content.substring(0, indexstart) + args[1].content.substring(indexstart)
 			};
 		};
 		
