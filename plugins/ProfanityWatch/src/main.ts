@@ -31,14 +31,14 @@ export default function patchSendMessage() {
 				
 				var messagelower = content.toLowerCase();
 				var indexstart = messagelower.indexOf(bad); //- bad.length;
+				var newcontent = args[1].content.substring(0, indexstart) + content.substring(indexstart, content.length);
 				showToast(`${content} ${bad} ${indexstart}`, getAssetIDByName("ic_warning_24px"));
-				content = args[1].content.substring(0, indexstart) + content.substring(indexstart, content.length);
 			};
 		};
 		
-		if(content !== args[1].content) {
-			showToast(`Watch your language!`, getAssetIDByName("ic_warning_24px"))
-		};
+		//if(content !== args[1].content) {
+			//showToast(`Watch your language!`, getAssetIDByName("ic_warning_24px"))
+		//};
 		
 		args[1].content = content;
 	});
