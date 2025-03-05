@@ -29,12 +29,10 @@ export default function patchSendMessage() {
 				   asterisks = asterisks + "*";
 				};
 				
-				var messagelower = args[1].content.toLowerCase();
-				var indexstart = messagelower.indexOf(bad) //- bad.length;
-				logger.log(content);
-				logger.log(bad);
-				logger.log(indexstart);
-				content = args[1].content.substring(0, indexstart) + args[1].content.substring(indexstart)
+				var messagelower = content.toLowerCase();
+				var indexstart = messagelower.indexOf(bad) - bad.length;
+				showToast(`${content}," ",${bad}," ",${indexstart}`, getAssetIDByName("ic_warning_24px"))
+				content = content.substring(0, indexstart) + content.substring(indexstart);
 			};
 		};
 		
