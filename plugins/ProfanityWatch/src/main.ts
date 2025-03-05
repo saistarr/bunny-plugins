@@ -30,7 +30,7 @@ export default function patchSendMessage() {
 				};
 				
 				var messagelower = args[1].content.toLowerCase();
-				var indexstart = messagelower.indexOf(bad) - bad.length;
+				var indexstart = messagelower.indexOf(bad) //- bad.length;
 				logger.log(content);
 				logger.log(bad);
 				logger.log(indexstart);
