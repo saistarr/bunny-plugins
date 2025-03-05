@@ -1,4 +1,5 @@
 // using fierdetta's Text Replacement plugin as a reference (not sure where to get the @vendetta locations, so its hard to make stuff on my own, if you happen to know id love to know!)
+// apologies for bad code, first time using typescript :)
 import { findByProps } from "@vendetta/metro";
 import { before } from "@vendetta/patcher";
 import { getAssetIDByName } from "@vendetta/ui/assets";
@@ -18,23 +19,24 @@ var profanity = [
 const Messages = findByProps("sendMessage", "receiveMessage");
 export default function patchSendMessage() {
 	return before("sendMessage", Messages, (args) => {
-		// The message content
 		let content = args[1].content as string;
 		
-		// Go through each rule and run the message through it
 		for (const bad of profanity) {
 			if ((content.toLowerCase()).includes(bad)) {
-				content = Array.from(content)[0]
-				for (let i = 0; i < args[1].content.length -1; i++) {
-				   content = content + "*";
+				var asterisks = ""
+				for (let i = 0; i < bad.length -1; i++) {
+				   asterisks = asterisks + "*";
 				};
+				
+				indexstart = (content.toLowerCase()).indexOf(bad - (bad.length +1))
+				content = args[1].content.substring(0, indexstart) + args[1].content.substring(args[1].content.length);
 			};
 		};
-
-		// Update message content with the updated content
+		
 		if(content !== args[1].content) {
-			showToast(`Language!`, getAssetIDByName("ic_warning_24px"))
+			showToast(`Watch your language!`, getAssetIDByName("ic_warning_24px"))
 		};
+		
 		args[1].content = content;
 	});
 };
