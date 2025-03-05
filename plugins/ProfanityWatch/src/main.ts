@@ -29,8 +29,8 @@ export default function patchSendMessage() {
 				   asterisks = asterisks + "*";
 				};
 				
-				var indexstart = (content.toLowerCase()).indexOf(bad - bad.length);
-				logger.log(indexstart);
+				//var indexstart = (content.toLowerCase()).indexOf(bad - bad.length);
+				//logger.log(indexstart);
 				logger.log(content);
 				logger.log(bad);
 				logger.log(bad.length);
