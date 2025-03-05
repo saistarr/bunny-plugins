@@ -28,7 +28,7 @@ export default function patchSendMessage() {
 				   asterisks = asterisks + "*";
 				};
 				
-				indexstart = (content.toLowerCase()).indexOf(bad - (bad.length +1))
+				var indexstart = (content.toLowerCase()).indexOf(bad - (bad.length +1))
 				content = args[1].content.substring(0, indexstart) + args[1].content.substring(args[1].content.length);
 			};
 		};
