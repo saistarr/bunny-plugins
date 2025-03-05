@@ -25,7 +25,7 @@ export default function patchSendMessage() {
 		for (const bad of profanity) {
 			if ((content.toLowerCase()).includes(bad)) {
 				for (let i = 0; i < content.length -1; i++) {
-				   content = Array.from(args[1].content)[0] + "*";
+				   content = content + "*";
 				};
 			};
 		};
