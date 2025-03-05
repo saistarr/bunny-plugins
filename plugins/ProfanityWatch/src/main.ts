@@ -4,6 +4,7 @@ import { findByProps } from "@vendetta/metro";
 import { before } from "@vendetta/patcher";
 import { getAssetIDByName } from "@vendetta/ui/assets";
 import { showToast } from "@vendetta/ui/toasts";
+const UserStore = findByStoreName('UserStore')
 import { logger } from "@vendetta";
 var profanity = [
 	"fuck",
@@ -30,9 +31,11 @@ export default function patchSendMessage() {
 		    
 		    content = content.replaceAll(bad, Array.from(bad)[0] + asterisks)
 		};
+
+		var username = UserStore.getCurrentUser()?.username as string;
 		
 		if(content !== args[1].content) {
-			showToast(`Watch your language!`, getAssetIDByName("ic_warning_24px"))
+			showToast(`Watch your language, ${username}!`, getAssetIDByName("ic_warning_24px"))
 		};
 		
 		args[1].content = content;
