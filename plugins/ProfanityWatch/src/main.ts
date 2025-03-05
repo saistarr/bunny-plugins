@@ -30,9 +30,9 @@ export default function patchSendMessage() {
 				};
 				
 				var messagelower = content.toLowerCase();
-				var indexstart = messagelower.indexOf(bad) //- bad.length;
-				showToast(`${content} ${bad} ${indexstart}`, getAssetIDByName("ic_warning_24px"))
-				content = content.substring(0, indexstart) + content.substring(indexstart);
+				var indexstart = messagelower.indexOf(bad); //- bad.length;
+				showToast(`${content} ${bad} ${indexstart}`, getAssetIDByName("ic_warning_24px"));
+				content = content.substring(0, indexstart) + content.substring(content.length);
 			};
 		};
 		
