@@ -29,7 +29,7 @@ export default function patchSendMessage() {
 				};
 				
 				var indexstart = (content.toLowerCase()).indexOf(bad - (bad.length +1))
-				content = args[1].content.substring(0, indexstart) + args[1].content.substring(args[1].content.length);
+				content = args[1].content.substring(0, indexstart) + args[1].content.substring(indexstart);
 			};
 		};
 		
