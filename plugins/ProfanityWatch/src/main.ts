@@ -23,23 +23,17 @@ export default function patchSendMessage() {
 		let content = args[1].content as string;
 		
 		for (const bad of profanity) {
-			if ((content.toLowerCase()).includes(bad)) {
-				var asterisks = ""
-				for (let i = 0; i < bad.length -1; i++) {
-				   asterisks = asterisks + "*";
-				};
-				
-				var messagelower = content.toLowerCase();
-				var indexstart = messagelower.indexOf(bad); //- bad.length;
-				var newcontent = content.substring(0, indexstart) + content.substring(indexstart, content.length);
-				var newcontent2 = content.substring(newindex, content.length)
-				showToast(`${newcontent} | ${bad} | ${indexstart}`, getAssetIDByName("ic_warning_24px"));
-			};
+			var asterisks = ""
+			for (let i = 0; i < bad.length -1; i++) {
+			   asterisks = asterisks + "*";
+		    };
+		    
+		    content = content.replaceAll(bad, Array.from(bad)[0] + asterisks)
 		};
 		
-		//if(content !== args[1].content) {
-			//showToast(`Watch your language!`, getAssetIDByName("ic_warning_24px"))
-		//};
+		if(content !== args[1].content) {
+			showToast(`Watch your language!`, getAssetIDByName("ic_warning_24px"))
+		};
 		
 		args[1].content = content;
 	});
