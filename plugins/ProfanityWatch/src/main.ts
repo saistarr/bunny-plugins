@@ -16,9 +16,6 @@ var profanity = [
 ];
 
 const Messages = findByProps("sendMessage", "receiveMessage");
-
-const Warning = getAssetIDByName("ic_warning_24px");
-
 export default function patchSendMessage() {
 	return before("sendMessage", Messages, (args) => {
 		// The message content
@@ -27,9 +24,8 @@ export default function patchSendMessage() {
 		// Go through each rule and run the message through it
 		for (const bad of profanity) {
 			if ((content.toLowerCase()).includes(bad)) {
-			content = Array.from(content)[0];
 				for (let i = 0; i < content.length -1; i++) {
-				   content = "*";
+				   content = Array.from(args[1].content)[0] + "*";
 				};
 			};
 		};
